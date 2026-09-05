@@ -1,0 +1,59 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  background: #0e0c09;
+  color: #f3eadc;
+  font: 16px/1.4 system-ui, sans-serif;
+}
+a { color: #e8a14a; text-decoration: none; }
+.wrap { max-width: 440px; margin: 0 auto; padding: 16px 14px 48px; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px; }
+h1 { font-size: 18px; margin: 0; }
+.sub { color: #9a8d78; font-size: 13px; margin: 4px 0 10px; }
+.btn, .pill, .chip {
+  border: 1px solid #3a3228;
+  background: #1a1712;
+  color: #f3eadc;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font: inherit;
+  cursor: pointer;
+}
+.btn.primary, .pill.on { background: #e8a14a; color: #0e0c09; border-color: #e8a14a; }
+.btn.block { display: block; width: 100%; text-align: center; margin-top: 10px; }
+.tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 8px; }
+.day { background: #1a1712; border: 1px solid #2a241c; border-radius: 14px; padding: 12px; margin: 10px 0; }
+.day h2 { margin: 0 0 6px; font-size: 15px; display: flex; justify-content: space-between; }
+.muted { color: #9a8d78; font-size: 13px; }
+.ex { margin: 8px 0 0; padding-top: 8px; border-top: 1px solid #2a241c; }
+.ex .name { font-weight: 600; font-size: 14px; }
+.ex .sets { color: #cbb79a; font-size: 13px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+label { display: block; font-size: 12px; color: #9a8d78; margin: 10px 0 4px; }
+input, textarea {
+  width: 100%;
+  background: #12100c;
+  border: 1px solid #3a3228;
+  border-radius: 10px;
+  color: #f3eadc;
+  padding: 12px;
+  font: inherit;
+}
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border-radius: 12px; padding: 10px 12px; font-size: 13px; text-align: left; }
+.setrow { display: grid; grid-template-columns: 28px 1fr 1fr auto; gap: 6px; align-items: center; margin: 6px 0; }
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  background: #e8a14a;
+  color: #0e0c09;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  display: none;
+  z-index: 20;
+  max-width: calc(100% - 32px);
+  text-align: center;
+}
