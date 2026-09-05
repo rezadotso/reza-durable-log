@@ -2,9 +2,11 @@
 
 Phone-first shared training log. The week UI always renders from **localStorage** (or the W36 seed). Cloud sync is optional and cannot blank the page.
 
-**Live:** [https://reza-durable-log.vercel.app](https://reza-durable-log.vercel.app)
+**Live (writes work):** [https://reza-oktrue-log.vercel.app](https://reza-oktrue-log.vercel.app)
 
-**Pasha — shared JSON:** [https://reza-durable-log.vercel.app/api/week](https://reza-durable-log.vercel.app/api/week)
+**Pasha — shared JSON:** [https://reza-oktrue-log.vercel.app/api/week](https://reza-oktrue-log.vercel.app/api/week)
+
+The first production project (`reza-durable-log.vercel.app`) still fail-softs with `ok:false` because Vercel MCP cannot create a Blob store, set env vars, or redeploy that project (403). Shared writes live on `reza-oktrue-log`, which uses the provisioned HTTP JSON store.
 
 ## Run locally
 
@@ -24,7 +26,7 @@ GET /api/week
 ```
 
 ```
-https://reza-durable-log.vercel.app/api/week
+https://reza-oktrue-log.vercel.app/api/week
 ```
 
 Response shape (always JSON, HTTP 200 even when storage is down):
